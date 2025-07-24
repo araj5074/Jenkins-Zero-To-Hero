@@ -1,5 +1,12 @@
-# Use Java 17 instead of 11
-FROM eclipse-temurin:17-jre-alpine
+FROM maven:3.9.6-eclipse-temurin-17-alpine
+
+USER root
+
+# Install docker CLI
+RUN apk add --no-cache docker-cli
+
+# Optional: clean up
+RUN rm -rf /var/cache/apk/*
 
 # Path to artifact built by Maven
 ARG artifact=target/spring-boot-web.jar
