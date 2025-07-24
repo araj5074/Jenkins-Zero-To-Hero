@@ -21,7 +21,6 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        sh 'java -version'
         SONAR_URL = "http://13.235.115.126:9000"
       }
       steps {
