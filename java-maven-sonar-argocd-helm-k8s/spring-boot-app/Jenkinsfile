@@ -2,7 +2,7 @@ pipeline {
   agent any // Run on normal Jenkins agent so it can checkout Git properly
 
   environment {
-    SONAR_URL = "http://13.235.115.126:9000"
+    SONAR_URL = "http://13.60.254.120:9000"
     DOCKER_IMAGE = "araj50074/ultimate-cicd:${BUILD_NUMBER}"
     GIT_REPO_NAME = "Jenkins-Zero-To-Hero"
     GIT_USER_NAME = "araj5074"
